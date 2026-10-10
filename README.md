@@ -1,55 +1,75 @@
-### Hi, I'm Sebastián
+# Sebastián Ibarra Herrera
 
-Computer Engineering student at Instituto Tecnológico de Costa Rica. I build and maintain real software for real users, and I'm especially interested in DevOps, application security and cloud, and in using AI coding agents in a repeatable, reviewable way.
+**Computer Engineering student at TEC (Costa Rica) · Full-stack developer · Application security, performance and CI**
 
-[LinkedIn](https://www.linkedin.com/in/sebastian-ibarra-herrera-653909349) · [Email](mailto:ibarraherrerasebastian@gmail.com) · Costa Rica · Spanish and English
+I build and maintain software that real people use. I like finding the root cause instead of patching the symptom, measuring before optimizing, and writing down why each technical decision was made.
 
----
-
-#### Featured work
-
-**Inventory and order platform** for a jiu-jitsu apparel startup (Next.js, TypeScript, Supabase, GitHub Actions)
-- Ran a **40-check security audit** and closed an unauthenticated RCE chain, 82 over-privileged database functions and a client-side pricing flaw.
-- Cut API latency by **45% to 54%** on the main routes after setting a measured performance baseline.
-- Built an **audit log** with database triggers and a CI pipeline across 3 branches.
-
-**Coming next:** a coral reef heat-stress monitoring platform that ingests NOAA satellite data and runs on Kubernetes with GitOps, observability and MLOps.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-sebastian--ibarra--herrera-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sebastian-ibarra-herrera-653909349)
+[![Email](https://img.shields.io/badge/Email-ibarraherrerasebastian%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:ibarraherrerasebastian@gmail.com)
+![Location](https://img.shields.io/badge/Costa_Rica-Spanish_%C2%B7_English_B2-555555)
 
 ---
 
-#### Tech I work with
+## Featured project: inventory, orders and invoicing platform
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,ts,js,nextjs,react,tailwind,postgres,supabase,docker,githubactions,git,bash,vercel&theme=dark&perline=13" />
-  <img alt="Python, TypeScript, JavaScript, Next.js, React, Tailwind CSS, PostgreSQL, Supabase, Docker, GitHub Actions, Git, Bash, Vercel" src="https://skillicons.dev/icons?i=py,ts,js,nextjs,react,tailwind,postgres,supabase,docker,githubactions,git,bash,vercel&theme=light&perline=13" />
-</picture>
+A web application for a jiu-jitsu apparel startup that handles inventory, customer orders, PDF invoices and sales statistics. It is live, it has a real client, and I own it end to end: requirements, architecture, security, performance and deployment.
 
-![Claude Code](https://img.shields.io/badge/AI--assisted_development-Claude_Code-D97757?logo=claude&logoColor=white)
+**Stack:** Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS · Supabase (PostgreSQL, Auth, Storage) · GitHub Actions · Vercel
 
-#### On my roadmap
+| Area | What I did | Result |
+|---|---|---|
+| **Security** | Ran a 40-check audit with file and line evidence for every finding, ranked by the real context of the product | Closed an unauthenticated RCE chain in Next.js, 82 database functions open to the public, and a pricing flaw where the client sent the order total |
+| **Performance** | Set a measured baseline first, then found that every API call validated the same token twice | API latency down 45% to 54% on the 5 main routes (630 ms to 292 ms on orders) |
+| **Database** | About 48 migrations, stored procedures and triggers; an audit log on 6 tables with user attribution read from request headers | Found and fixed schema drift (29 constraints existed in production but not in migrations) |
+| **DevOps** | CI on GitHub Actions across 3 branches; upgrade to Next.js 15.5 and React 19; scripted deploy branch | First green pipeline in 1 min 43 s; deploys no longer clone the whole repo |
+| **Frontend** | Diagnosed responsive bugs by measuring the DOM, not by eye; token-based color themes; 44 px touch targets and reduced-motion support | Two layout overflows (177 px and 128 px) traced to their real cause |
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=kubernetes,terraform,aws,prometheus,grafana,linux&theme=dark" />
-  <img alt="Kubernetes, Terraform, AWS, Prometheus, Grafana, Linux" src="https://skillicons.dev/icons?i=kubernetes,terraform,aws,prometheus,grafana,linux&theme=light" />
-</picture>
+**What I would want a reviewer to notice:** I also documented two reasonable hypotheses that the measurements proved wrong, and I keep a log of decisions with the alternatives I rejected and why.
 
 ---
 
-#### How I work
+## How I work
 
-I measure before optimizing, look for root causes instead of patching symptoms, and document every technical decision with its reasoning and the alternatives I discarded.
+- **Measure first.** Baseline numbers before any optimization, and a record of what the numbers disproved.
+- **Root cause over symptom.** Including reverting a first fix that broke something else.
+- **Decisions on paper.** Each choice written down with its reasoning and discarded alternatives.
+- **Verification without a test framework (for now).** About 17 executable verification scripts, and automated tests are next on my list.
+- **AI coding agents, with ownership.** I use Claude Code for implementation, and I keep architecture, review and deployment decisions myself.
 
-<!--
-**SebasIbarra19/SebasIbarra19** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+---
 
-Here are some ideas to get you started:
+## Tech stack
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**Languages**
+
+![Python](https://skillicons.dev/icons?i=py,ts,js,java,cpp&theme=light&perline=10)
+
+**Frontend**
+
+![Frontend](https://skillicons.dev/icons?i=react,nextjs,tailwind&theme=light&perline=10)
+
+**Backend and data**
+
+![Backend](https://skillicons.dev/icons?i=postgres,supabase,mongodb,redis&theme=light&perline=10)
+
+**Tools and delivery**
+
+![Tools](https://skillicons.dev/icons?i=git,githubactions,docker,bash,vercel&theme=light&perline=10)
+
+**Currently learning (hands-on projects coming):** Linux administration, Kubernetes, Terraform, AWS, observability.
+
+---
+
+## Community and experience
+
+- **CoraMar** (coral conservation nonprofit, Aug 2026 to present): requirements and module scope for the public website and a laboratory data platform.
+- **IEEE Student Branch, TEC**: Fiscal (Aug 2024 to Mar 2025). Helped first-time council members take ownership of their responsibilities.
+- **IEEE Region 9 SBRM 2024**, San Salvador: represented TEC among 210 participants from 57 student branches and presented a concept paper.
+
+## Certifications
+
+Introduction to Git (DataCamp, Jun 2023) · Introduction to Shell (DataCamp, May 2023)
+
+---
+
+*Open to part-time roles and internships. The best way to reach me is email or LinkedIn.*
